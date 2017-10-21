@@ -26,6 +26,8 @@ $.ajax({
 
   //console.log the data 
   console.log(data);
+  // Test final print
+  $(".end").append(data.length + "People just like you were Killed by police between 2015 - 2016");
   });
 
 });

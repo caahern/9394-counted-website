@@ -5,6 +5,7 @@
 <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 <!-- Java source code -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
 <meta charset="UTF-8">
 <title>Counted API - Dynamic Data Project</title>
 </head>
@@ -12,7 +13,8 @@
 
    
 <!-- Age -->
-<div id="Age">
+  <!-- Data next added -->
+<div id="Age" data-next="#Ethnicity">
 <h2>Enter your age</h2>
 <input id="ageInput" name="age" type="text">  
 </input>
@@ -20,7 +22,8 @@
 
 
 <!-- Ethnicity -->
-<div id="Ethnicity">
+  <!-- Data next added -->
+<div id="Ethnicity" data-next="#Gender">
 <h2>Select Ethnicity</h2>
 <select id="ethnicInput" name="ethnicity">
       <option class="selection" value="-" >-</option>
@@ -29,14 +32,15 @@
       <option class="selection" value="Hispanic/Latino">Hispanic/Latino</option>
       <option class="selection" value="Asian/Pacific Islander">Asian/ Pacific Islander</option>
       <option class="selection" value="Native American">Native American</option>
-       <option class="selection" value="Arab-American">Arab</option>
+      <option class="selection" value="Arab-American">Arab</option>
 </select>
 </div>
    
    
  
 <!-- Gender -->
-<div id="Gender">
+  <!-- Data next added -->
+<div id="Gender" data-next="#End">
    <h2>Select Gender</h2>
         <select id="genderInput" name="gender">
                <option class="selection" value="-" >-</option>
@@ -44,6 +48,11 @@
                <option class="selection" value="Female">Female</option>
         </select>
 </div>
+
+
+<div id="End">
+</div>
+
 </body>
 <script src="java.js"</script>
 </html>

@@ -8,10 +8,15 @@ $(document).on('change','#genderInput',function(){
 
 // Declare the gender variable as user genderInput
 gender = document.getElementById("genderInput").value;
+//Declare age variable as age Input
+age = document.getElementById("ageInput").value;
+// Declare the race variable as ethnicInput 
+race = document.getElementById("ethnicInput").value;
+
 // Call counted Api
 $.ajax({
 	// url for counted api
-       url: "https://thecountedapi.com/api/counted/?sex=" + gender,
+       url: "https://thecountedapi.com/api/counted/?sex=" + gender + "&race=" + race + "&age=" + age,
     // Get request
        type: "GET",
     // function data

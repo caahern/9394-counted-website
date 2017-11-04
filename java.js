@@ -3,8 +3,11 @@
 
 //Counted API - Dynamic Data Project
 
-// When Gender Input is changed - run #genderInput function
-$(document).on('change','#genderInput',function(){
+// When submit button clicked - run #submit-btn function
+$(document).on('click','#submit-btn',function(){
+
+// Hide submit div 
+$("#Submit").fadeOut();
 
 // Declare the gender variable as user genderInput
 gender = document.getElementById("genderInput").value;
@@ -31,6 +34,37 @@ $.ajax({
   });
 
 });
+
+
+// When #ageInput is changed hide the Age div
+$(document).on('change','#ageInput',function(){
+ 
+ $("#Age").fadeOut();
+
+});
+
+
+// When #ethnicInput is changed hide the ethnicity div
+$(document).on('change','#ethnicInput',function(){
+ 
+ $("#Ethnicity").fadeOut();
+
+});
+
+// When #genderInput is changed hide the Gender div
+$(document).on('change','#genderInput',function(){
+ 
+ $("#Gender").fadeOut();
+
+});
+
+
+
+
+
+
+
+
 
 
 //google maps

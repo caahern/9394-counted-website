@@ -8,26 +8,82 @@
 
 
 /*   TABLE OF CONTENTS   */
+*{
+	padding: 0;
+	margin: 0;
+}
 
-#Age{
-	text-align: center;
+html{
+	padding: 0;
+	margin: 0;
 }
 
 
+/* -------------------------  Age ---*/
+#Age{
+	text-align: center;
+	width: 100%;
+	height: 100vh;
+	background-color: #66517A;
+}
+
+#Age h2{
+	padding-top: 250px;
+	padding-bottom: 20px;
+}
+
+#Age input{
+	width: 200px;
+}
+
+
+/* -------------------------  Ethnicity ---*/
 #Ethnicity{
 	text-align: center;
 	display: none;
+	width: 100%;
+	height: 100vh;
+	background-color: #E59327;
 }
+
+#Ethnicity h2{
+	padding-top: 250px;
+	padding-bottom: 20px;
+}
+
+
+/* -------------------------  Gender ---*/
 
 #Gender{
 	text-align: center;
 	display: none;
+	width: 100%;
+	height: 100vh;
+	background-color: #D5953D;
 }
 
+
+#Gender h2{
+	padding-top: 250px;
+	padding-bottom: 20px;
+}
+
+/* -------------------------  Submit ---*/
 #Submit{
 	text-align: center;
 	display: none;
+	width: 100%;
+	height: 100vh;
+	background-color: #D46524;
 }
+
+#submit-btn button{
+	padding-top: 250px;
+	padding-bottom: 20px;
+}
+
+
+/* -------------------------  End ---*/
 
 #End{
 	display: none;;

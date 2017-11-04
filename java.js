@@ -7,7 +7,7 @@
 $(document).on('click','#submit-btn',function(){
 
 // Hide submit div 
-$("#Submit").fadeOut();
+$("#Gender").fadeOut();
 // Fade in results page 
 $("#End").fadeIn();
 // Fade in Map 
@@ -43,8 +43,8 @@ $.ajax({
 // When #ageInput is changed hide the Age div
 $(document).on('change','#ageInput',function(){
  
- $("#Age").fadeOut();
- $('#Ethnicity').fadeIn();
+ $("#Age").fadeOut(1000);
+ $('#Ethnicity').fadeIn(2000);
 
 });
 
@@ -52,18 +52,12 @@ $(document).on('change','#ageInput',function(){
 // When #ethnicInput is changed hide the ethnicity div
 $(document).on('change','#ethnicInput',function(){
  
- $("#Ethnicity").fadeOut();
- $('#Gender').fadeIn();
+ $("#Ethnicity").fadeOut(1000);
+ $('#Gender').fadeIn(2000);
 
 });
 
-// When #genderInput is changed hide the Gender div
-$(document).on('change','#genderInput',function(){
- 
- $("#Gender").fadeOut();
- $('#Submit').fadeIn();
 
-});
 
 
 

@@ -89,6 +89,12 @@ html{
 	display: none;;
 }
 
+#Statement{
+	width: 100%;
+	height: 500px;
+	background-color: #B44822;
+}
+
 
 #map {
 	height: 400px;

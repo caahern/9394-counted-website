@@ -34,7 +34,7 @@ $.ajax({
   //console.log the data 
   console.log(data);
   // Test final print
-  $(".Statement").append(data.length + " " + "people just like you were killed by police in the U.S.A between 2015 - 2016");
+  $("#Statement").append(data.length + " " + "people just like you were killed by police in the U.S.A between 2015 - 2016");
   });
 
 });

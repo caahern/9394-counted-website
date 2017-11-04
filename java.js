@@ -13,6 +13,8 @@ $("#End").fadeIn();
 // Fade in Map 
 $("#map").fadeIn();
 
+$("footer").fadeIn();
+
 // Declare the gender variable as user genderInput
 gender = document.getElementById("genderInput").value;
 //Declare age variable as age Input
@@ -34,7 +36,7 @@ $.ajax({
   //console.log the data 
   console.log(data);
   // Test final print
-  $("#Statement").append(data.length + " " + "people just like you were killed by police in the U.S.A between 2015 - 2016");
+  $("#Memo").append(data.length + " " + "people just like you were killed by law enforcement in the U.S.A between 2015 - 2016");
   });
 
 });

@@ -95,6 +95,20 @@ html{
 	background-color: #B44822;
 }
 
+#Memo{
+	font-family: 'Rozha One', serif;
+	color: #fff;
+    padding-left: 50px;
+	padding-top: 80px;
+}
+
+
+#info{
+	width: 100%;
+	height: 200px;
+	background-color: #E59327;
+}
+
 
 #map {
 	height: 400px;
@@ -104,20 +118,48 @@ html{
 }
 
 
+/* -------------------------  Footer ---*/
+footer{
+	background-color: #66517A;
+	width: 100%;
+	height: 50px;
+	display: none;
+}
+
+
 
 /* Responsive */
 
-/* Mobile*/
-[*] {
-    ;
+
+@media only screen and (min-width: 1224px) {
+#Memo{
+    font-size: 100px;
+	width: 50%;
 }
 
-/*Desktop */
+}
+
 @media only screen and (min-width: 768px) {
+#Memo{
+    font-size: 50px;
+	width: 50%;
+}
+
+}
+@media only screen and (min-width: 600px) {
+
+	#Memo{
+    font-size: 40px;
+	width: 45%;
+}
 
 }
 
-/*Tablet*/
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 320px){
+	
+	#Memo{
+    font-size: 30px;
+	width: 60%;
+}
 
 }

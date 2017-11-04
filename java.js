@@ -8,6 +8,8 @@ $(document).on('click','#submit-btn',function(){
 
 // Hide submit div 
 $("#Submit").fadeOut();
+// Fade in results page 
+$("#End").fadeIn();
 
 // Declare the gender variable as user genderInput
 gender = document.getElementById("genderInput").value;
@@ -40,6 +42,7 @@ $.ajax({
 $(document).on('change','#ageInput',function(){
  
  $("#Age").fadeOut();
+ $('#Ethnicity').fadeIn();
 
 });
 
@@ -48,6 +51,7 @@ $(document).on('change','#ageInput',function(){
 $(document).on('change','#ethnicInput',function(){
  
  $("#Ethnicity").fadeOut();
+ $('#Gender').fadeIn();
 
 });
 
@@ -55,15 +59,9 @@ $(document).on('change','#ethnicInput',function(){
 $(document).on('change','#genderInput',function(){
  
  $("#Gender").fadeOut();
+ $('#Submit').fadeIn();
 
 });
-
-
-
-
-
-
-
 
 
 

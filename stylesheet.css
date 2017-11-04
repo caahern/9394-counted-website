@@ -16,10 +16,21 @@
 
 #Ethnicity{
 	text-align: center;
+	display: none;
 }
 
 #Gender{
 	text-align: center;
+	display: none;
+}
+
+#Submit{
+	text-align: center;
+	display: none;
+}
+
+#End{
+	display: none;;
 }
 
 
@@ -27,12 +38,4 @@
 	height: 400px;
 	width: 100%;
 	margin: 0;
-}
-
-#Submit{
-	text-align: center;
-}
-
-#End{
-	display: none;;
 }

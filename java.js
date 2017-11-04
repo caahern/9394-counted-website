@@ -10,6 +10,8 @@ $(document).on('click','#submit-btn',function(){
 $("#Submit").fadeOut();
 // Fade in results page 
 $("#End").fadeIn();
+// Fade in Map 
+$("#map").fadeIn();
 
 // Declare the gender variable as user genderInput
 gender = document.getElementById("genderInput").value;
@@ -32,7 +34,7 @@ $.ajax({
   //console.log the data 
   console.log(data);
   // Test final print
-  $(".end").append(data.length + "People just like you were Killed by police between 2015 - 2016");
+  $(".Statement").append(data.length + " " + "people just like you were killed by police in the U.S.A between 2015 - 2016");
   });
 
 });

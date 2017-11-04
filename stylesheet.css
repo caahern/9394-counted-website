@@ -38,4 +38,24 @@
 	height: 400px;
 	width: 100%;
 	margin: 0;
+	display: none;
+}
+
+
+
+/* Responsive */
+
+/* Mobile*/
+[*] {
+    ;
+}
+
+/*Desktop */
+@media only screen and (min-width: 768px) {
+
+}
+
+/*Tablet*/
+@media only screen and (min-width: 600px) {
+
 }

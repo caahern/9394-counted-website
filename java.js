@@ -28,6 +28,7 @@ map = new google.maps.Map(document.getElementById('map'), {zoom: 4,center: USA }
 // Set a test marker on the USA 
 marker = new google.maps.Marker({position: USA,map: map});
 
+
 // Call counted Api
 $.ajax({
 	// url for counted api
@@ -42,13 +43,25 @@ $.ajax({
 
   //console.log the data 
   console.log(data);
+  
+  // Declare the address variable as data.map of the data array
+  var address = data.map(a => a.address);
+  // Log the adresses to console
+  console.log(address);
+  // Declare the city variable
+  var city = data.map(a => a.city);
+  // Log the city
+  console.log(city);
+  // Declare the state variable 
+  var state = data.map(a => a.state);
+  // Log the states
+  console.log(state);
+  
 
 
   // Final print - amount killed based on user information
   $("#Memo").append(data.length + " " + "people just like you were killed by law enforcement in the U.S.A between 2015 - 2016");
   });
-
-
 });
 
 

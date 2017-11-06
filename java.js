@@ -19,15 +19,6 @@ age = document.getElementById("ageInput").value;
 // Declare the race variable as ethnicInput 
 race = document.getElementById("ethnicInput").value;
 
-// USA variable for map centre 
-USA = {lat: 37.0902, lng: -95.7129};
-
-// Set the map variable as the map div
-map = new google.maps.Map(document.getElementById('map'), {zoom: 4,center: USA });
-
-// Set a test marker on the USA 
-marker = new google.maps.Marker({position: USA,map: map});
-
 
 // Call counted Api
 $.ajax({
@@ -63,8 +54,28 @@ $.ajax({
   key = "AIzaSyDxPgT42cAX7G1N6ygCcZRpvaJI6VdDm5s";
   // Google maps geolocation api url
   url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "," + city + ","+ state +"&key=" + key; 
-  
-  
+  // Get request for google maps api
+  $.ajax({
+  // url 
+  url,
+  //get request
+  type: "GET",
+  // run function after get request
+  }).done(function(data){
+  // Log the data from request for debug
+  console.log(data);
+
+
+  // USA variable for map centre 
+  USA = {lat: 37.0902, lng: -95.7129};
+
+  // Set the map variable as the map div
+  map = new google.maps.Map(document.getElementById('map'), {zoom: 4,center: USA });
+
+  // Set a test marker on the USA 
+  marker = new google.maps.Marker({position: USA,map: map});
+
+    });
   });
 });
 

@@ -1,17 +1,14 @@
 // JavaScript Document
 
-
 //Counted API - Dynamic Data Project
 
 // When submit button clicked - run #submit-btn function
 $(document).on('click','#submit-btn',function(){
 
 // Hide submit div 
-$("#Specific").fadeOut();
+$("#Specific").fadeOut(500);
 // Fade in results page 
 $("#End").fadeIn(2000);
-// Fade in Map 
-$("#map").fadeIn();
 
 $("footer").fadeIn();
 
@@ -22,6 +19,14 @@ age = document.getElementById("ageInput").value;
 // Declare the race variable as ethnicInput 
 race = document.getElementById("ethnicInput").value;
 
+// USA variable for map centre 
+USA = {lat: 37.0902, lng: -95.7129};
+
+// Set the map variable as the map div
+map = new google.maps.Map(document.getElementById('map'), {zoom: 4,center: USA });
+
+// Set a test marker on the USA 
+marker = new google.maps.Marker({position: USA,map: map});
 
 // Call counted Api
 $.ajax({
@@ -31,14 +36,18 @@ $.ajax({
        type: "GET",
     // function data
   }).done(function(data) {
+  
   // for test alert how many data entries are presented
   //alert("Retrieved " + data.length + " records from the dataset!");
 
   //console.log the data 
   console.log(data);
-  // Test final print
+
+
+  // Final print - amount killed based on user information
   $("#Memo").append(data.length + " " + "people just like you were killed by law enforcement in the U.S.A between 2015 - 2016");
   });
+
 
 });
 
@@ -69,19 +78,9 @@ $(document).on('change','#genderInput',function(){
 
 });
 
-//opinion = document.getElementById("specificInput").value;
-
 
 //google maps -----   Caitlin
 
-function initMap() {
-  var uluru = {lat: -25.363, lng: 131.044};
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 4,
-    center: uluru
-  });
-  var marker = new google.maps.Marker({
-    position: uluru,
-    map: map
-  });
-}
+//opinion = document.getElementById("specificInput").value;
+
+

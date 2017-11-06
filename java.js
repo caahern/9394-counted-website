@@ -7,9 +7,9 @@
 $(document).on('click','#submit-btn',function(){
 
 // Hide submit div 
-$("#Gender").fadeOut();
+$("#Specific").fadeOut();
 // Fade in results page 
-$("#End").fadeIn();
+$("#End").fadeIn(2000);
 // Fade in Map 
 $("#map").fadeIn();
 
@@ -22,6 +22,7 @@ age = document.getElementById("ageInput").value;
 // Declare the race variable as ethnicInput 
 race = document.getElementById("ethnicInput").value;
 
+
 // Call counted Api
 $.ajax({
 	// url for counted api
@@ -31,7 +32,7 @@ $.ajax({
     // function data
   }).done(function(data) {
   // for test alert how many data entries are presented
-  alert("Retrieved " + data.length + " records from the dataset!");
+  //alert("Retrieved " + data.length + " records from the dataset!");
 
   //console.log the data 
   console.log(data);
@@ -60,10 +61,18 @@ $(document).on('change','#ethnicInput',function(){
 });
 
 
+// When #ethnicInput is changed hide the ethnicity div
+$(document).on('change','#genderInput',function(){
+ 
+ $("#Gender").fadeOut(1000);
+ $('#Specific').fadeIn(2000);
+
+});
+
+//opinion = document.getElementById("specificInput").value;
 
 
-
-//google maps
+//google maps -----   Caitlin
 
 function initMap() {
   var uluru = {lat: -25.363, lng: 131.044};

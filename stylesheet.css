@@ -68,6 +68,21 @@ html{
 	padding-bottom: 20px;
 }
 
+/* -------------------------  Specific ---*/
+#Specific{
+	display: none;
+	text-align: center;
+	display: none;
+	width: 100%;
+	height: 100vh;
+	background-color: #D5953D;
+}
+
+#Specific h2{
+	padding-top: 250px;
+	padding-bottom: 20px;
+}
+
 /* -------------------------  Submit ---*/
 #Submit{
 	text-align: center;
@@ -86,7 +101,8 @@ html{
 /* -------------------------  End ---*/
 
 #End{
-	display: none;;
+
+	display: none;
 }
 
 #Statement{

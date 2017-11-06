@@ -43,6 +43,9 @@ $.ajax({
 
   //console.log the data 
   console.log(data);
+
+  // Final print - amount killed based on user information
+  $("#Memo").append(data.length + " " + "people just like you were killed by law enforcement in the U.S.A between 2015 - 2016");
   
   // Declare the address variable as data.map of the data array
   var address = data.map(a => a.address);
@@ -56,11 +59,12 @@ $.ajax({
   var state = data.map(a => a.state);
   // Log the states
   console.log(state);
+
+  key = "AIzaSyDxPgT42cAX7G1N6ygCcZRpvaJI6VdDm5s";
+  // Google maps geolocation api url
+  url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "," + city + ","+ state +"&key=" + key; 
   
-
-
-  // Final print - amount killed based on user information
-  $("#Memo").append(data.length + " " + "people just like you were killed by law enforcement in the U.S.A between 2015 - 2016");
+  
   });
 });
 

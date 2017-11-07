@@ -38,28 +38,54 @@ $.ajax({
   // Final print - amount killed based on user information
   $("#Memo").append(data.length + " " + "people just like you were killed by law enforcement in the U.S.A between 2015 - 2016");
   
+  //google maps ----------------------------------------------------------- 
+
   // Declare the address variable as data.map of the data array
+  
   var address = data.map(a => a.address);
-  // Log the adresses to console
-  console.log(address);
+  
+  // For each address data print to console for debug
+  address.forEach(function(address){
+
+    console.log(address);
+  });
+
+
+
   // Declare the city variable
   var city = data.map(a => a.city);
-  // Log the city
-  console.log(city);
+
+  // For each address data print to console for debug
+  city.forEach(function(city){
+
+    console.log(city);
+  });
+
+
+
+
   // Declare the state variable 
   var state = data.map(a => a.state);
-  // Log the states
-  console.log(state);
 
+  // For each address data print to console for debug
+  state.forEach(function(state){
+    console.log(state);
+  });
+
+
+  // Google maps key 
   key = "AIzaSyDxPgT42cAX7G1N6ygCcZRpvaJI6VdDm5s";
   // Google maps geolocation api url
-  url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "," + city + ","+ state +"&key=" + key; 
+  url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "," + city + "," + state + "&key=" + key; 
   // Get request for google maps api
+
+  //for (var i = 0, len = data.length; i < len; i++) {
   $.ajax({
   // url 
   url,
   //get request
   type: "GET",
+  
   // run function after get request
   }).done(function(data){
   // Log the data from request for debug
@@ -76,6 +102,7 @@ $.ajax({
   marker = new google.maps.Marker({position: USA,map: map});
 
     });
+   //};
   });
 });
 
@@ -107,7 +134,7 @@ $(document).on('change','#genderInput',function(){
 });
 
 
-//google maps -----   Caitlin
+
 
 //opinion = document.getElementById("specificInput").value;
 

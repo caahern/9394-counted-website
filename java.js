@@ -18,6 +18,8 @@ gender = document.getElementById("genderInput").value;
 age = document.getElementById("ageInput").value;
 // Declare the race variable as ethnicInput 
 race = document.getElementById("ethnicInput").value;
+//
+opinion = document.getElementById("specificInput").value;
 
 
 // Call counted Api
@@ -38,6 +40,9 @@ $.ajax({
   // Final print - amount killed based on user information
   $("#Memo").append(data.length + " " + "people just like you were killed by law enforcement in the U.S.A between 2015 - 2016");
   
+
+ 
+  $("#userint").append("<p>You said" + " " + opinion + " " + "people was an appropriate number.</p>");
   //google maps ----------------------------------------------------------- 
 
   // Declare the address variable as data.map of the data array
@@ -49,7 +54,6 @@ $.ajax({
 
     console.log(address);
   });
-
 
 
   // Declare the city variable
@@ -79,7 +83,7 @@ $.ajax({
   url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "," + city + "," + state + "&key=" + key; 
   // Get request for google maps api
 
-  //for (var i = 0, len = data.length; i < len; i++) {
+ 
   $.ajax({
   // url 
   url,
@@ -102,7 +106,6 @@ $.ajax({
   marker = new google.maps.Marker({position: USA,map: map});
 
     });
-   //};
   });
 });
 
@@ -134,8 +137,14 @@ $(document).on('change','#genderInput',function(){
 });
 
 
+$(document).on('click','#restart',function(){
+ 
+ $("#End").fadeOut(2000);
+ location.reload();
+ $("#Age").fadeIn(3000);
 
 
-//opinion = document.getElementById("specificInput").value;
+});
+
 
 

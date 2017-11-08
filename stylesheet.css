@@ -20,6 +20,8 @@ html{
 
 
 
+
+
 /* -------------------------  Age ---*/
 #Age{
 	text-align: center;
@@ -33,10 +35,35 @@ html{
 	padding-bottom: 20px;
 }
 
-#Age input{
-	width: 200px;
+input {
+    width: 20%;
+    height: 5%;
 }
 
+
+input:hover {
+    transition:all 0.3s ease;
+    background-color: #F2EBE1;
+    opacity: 10;
+}
+
+
+
+input[type=text] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type=text]:focus {
+    border: 3px solid #555;
+    background-color: #F2EBE1;
+}
+
+
+#Specific input[type=text]:focus {
+    border: 3px solid #D5953D;
+}
 
 /* -------------------------  Ethnicity ---*/
 #Ethnicity{

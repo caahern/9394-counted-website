@@ -19,6 +19,19 @@ html{
 }
 
 
+button {
+    background-color: #fff;
+    font-family: 'Rozha One', serif; /* Green */
+    border: none;
+    color: #D46524;
+    width: 10%;
+    height: 5%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
 
 
 
@@ -33,6 +46,9 @@ html{
 #Age h2{
 	padding-top: 250px;
 	padding-bottom: 20px;
+	font-family: 'Rozha One', serif;
+	font-size: 40px;
+	color: #fff;
 }
 
 input {
@@ -77,6 +93,9 @@ input[type=text]:focus {
 #Ethnicity h2{
 	padding-top: 250px;
 	padding-bottom: 20px;
+	font-family: 'Rozha One', serif;
+	font-size: 40px;
+	color: #fff;
 }
 
 
@@ -94,6 +113,9 @@ input[type=text]:focus {
 #Gender h2{
 	padding-top: 250px;
 	padding-bottom: 20px;
+	font-family: 'Rozha One', serif;
+	font-size: 40px;
+	color: #fff;
 }
 
 /* -------------------------  Specific ---*/
@@ -109,6 +131,9 @@ input[type=text]:focus {
 #Specific h2{
 	padding-top: 250px;
 	padding-bottom: 20px;
+	font-family: 'Rozha One', serif;
+	font-size: 30px;
+	color: #fff;
 }
 
 /* -------------------------  Submit ---*/

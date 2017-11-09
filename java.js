@@ -36,6 +36,9 @@ $.ajax({
 
   //console.log the data 
   console.log(data);
+	
+//need to put the data into an array so you can loop through it
+  var people = data;
 
   // Final print - amount killed based on user information
   $("#Memo").append(data.length + " " + "people just like you were killed by law enforcement in the U.S.A between 2015 - 2016");
@@ -47,34 +50,37 @@ $.ajax({
 
   // Declare the address variable as data.map of the data array
   
-  var address = data.map(a => a.address);
+  //var address = data.map(a => a.address);
   
   // For each address data print to console for debug
-  address.forEach(function(address){
+  people.forEach(function(person){
 
-    console.log(address);
-  });
+    console.log(person);
+	  var address = person.address;
+	  var city = person.city;
+	  var state = person.state;
 
 
   // Declare the city variable
-  var city = data.map(a => a.city);
+  //var city = data.map(a => a.city);
 
   // For each address data print to console for debug
-  city.forEach(function(city){
+  //city.forEach(function(city){
 
-    console.log(city);
-  });
+    //console.log(city);
+	
+ // });
 
 
 
 
   // Declare the state variable 
-  var state = data.map(a => a.state);
+  //var state = data.map(a => a.state);
 
   // For each address data print to console for debug
-  state.forEach(function(state){
-    console.log(state);
-  });
+  //state.forEach(function(state){
+  //  console.log(state);
+  //);
 
 
   // Google maps key 
@@ -91,9 +97,18 @@ $.ajax({
   type: "GET",
   
   // run function after get request
-  }).done(function(data){
-  // Log the data from request for debug
-  console.log(data);
+  }).done(function(geocodedData){
+	  
+	  //set a timer which only runs after 2 seconds - need to wait for the data to be returned from the server
+	  setTimeout(function (){
+  
+		  // Log the data from request for debug
+  		  console.log(geocodedData.results);
+		  
+		//need to get the right info from the api, then set the newmarker to that
+		//this doesn't work for some reason - might need to troubleshoot the api results
+			 
+		var newMarker = geocodedData.results.geometry.location;
 
 
   // USA variable for map centre 
@@ -105,7 +120,7 @@ $.ajax({
   // Set a test marker on the USA 
   marker = new google.maps.Marker({position: USA,map: map});
 
-    });
+    }, 3000);
   });
 });
 

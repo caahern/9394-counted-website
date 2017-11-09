@@ -89,36 +89,45 @@ $.ajax({
   url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "," + city + "," + state + "&key=" + key; 
   // Get request for google maps api
 
- 
-  $.ajax({
-  // url 
-  url,
-  //get request
-  type: "GET",
-  
-  // run function after get request
-  }).done(function(geocodedData){
-	  
-	  //set a timer which only runs after 2 seconds - need to wait for the data to be returned from the server
-	  setTimeout(function (){
-  
-		  // Log the data from request for debug
-  		  console.log(geocodedData.results);
-		  
-		//need to get the right info from the api, then set the newmarker to that
-		//this doesn't work for some reason - might need to troubleshoot the api results
-			 
-		var newMarker = geocodedData.results.geometry.location;
-
-
-  // USA variable for map centre 
+    // USA variable for map centre 
   USA = {lat: 37.0902, lng: -95.7129};
 
   // Set the map variable as the map div
   map = new google.maps.Map(document.getElementById('map'), {zoom: 4,center: USA });
 
+ 
+  $.ajax({
+  // url 
+  url,
+  //get request
+  type: "GET"
+  // run function after get request
+  }).done(function(geocodedData){
+	  
+    console.log(geocodedData.results[0].geometry.location.lat);
+
+    var lat = geocodedData.results[0].geometry.location.lat;
+
+    console.log(geocodedData.results[0].geometry.location.lng);
+
+    var lng = geocodedData.results[0].geometry.location.lng;
+
+    var myLatLng = {lat: lat, lng: lng};
+
+    console.log(myLatLng);
+	  //set a timer which only runs after 2 seconds - need to wait for the data to be returned from the server
+	  setTimeout(function (){
+    
+		  // Log the data from request for debug
+
+  
+		//need to get the right info from the api, then set the newmarker to that
+		//this doesn't work for some reason - might need to troubleshoot the api results
+			 
+		//var newMarker = geocodedData.results.geometry.location;
+
   // Set a test marker on the USA 
-  marker = new google.maps.Marker({position: USA,map: map});
+  marker = new google.maps.Marker({position: myLatLng,map: map});
 
     }, 3000);
   });

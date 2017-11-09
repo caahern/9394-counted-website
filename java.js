@@ -12,6 +12,8 @@ $("#End").fadeIn(2000);
 
 $("footer").fadeIn();
 
+$("#infobar").fadeIn();
+
 // Declare the gender variable as user genderInput
 gender = document.getElementById("genderInput").value;
 //Declare age variable as age Input
@@ -41,6 +43,8 @@ $.ajax({
   var people = data;
 
   // Final print - amount killed based on user information
+
+
   $("#Memo").append(data.length + " " + "people just like you were killed by law enforcement in the U.S.A between 2015 - 2016");
   
 

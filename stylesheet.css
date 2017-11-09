@@ -397,9 +397,25 @@ input[type=text]:focus {
 
 /* -------------------------  Footer ---*/
 footer{
-	background-color: #66517A;
+	background-color:#66517A ; 
 	width: 100%;
 	height: 50px;
+	display: none;
+
+}
+
+footer p{
+	font-family: 'Rozha One', serif;
+	color: #3E314A;
+	font-size: 12px;
+	text-align: center;
+	padding-top: 25px;
+}
+
+#infobar{
+	background-color:#3E314A ; 
+	width: 100%;
+	height: 20px;
 	display: none;
 }
 

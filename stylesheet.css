@@ -20,6 +20,10 @@
 #submit-btn {
   width: 30%;
  }
+  #memo{
+ 	width: 15%;
+ 	padding-left: 4em;
+ }
   }
 /* smartphones, Android phones, landscape iPhone */
 @media (min-width:480px)  {
@@ -31,6 +35,10 @@
  }
  #submit-btn{
   width: 25%;
+ }
+  #memo{
+ 	width: 20%;
+ 	padding-left: 2em;
  }
   }
 /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
@@ -44,6 +52,10 @@
  #submit-btn{
   width: 20%;
  }
+  #memo{
+ 	width: 25%;
+ 	padding-left: 1.25em;
+ }
   }
 /* tablet, landscape iPad, lo-res laptops ands desktops */
 @media (min-width:801px)  {
@@ -55,6 +67,10 @@
  }
  #submit-btn {
   width: 15%;
+ }
+  #memo{
+ 	width: 30%;
+ 	padding-left: 1.875em;
  }
   }
 /* big landscape tablets, laptops, and desktops */
@@ -68,6 +84,10 @@
  #submit-btn {
   width: 10%;
  }
+  #memo{
+ 	width: 40%;
+ 	padding-left: 2.5em;
+ }
   }
 /* hi-res laptops and desktops */
 @media (min-width:1281px) {
@@ -80,6 +100,10 @@
  }
  #submit-btn{
   width: 10%;
+ }
+ #memo{
+ 	width: 50%;
+ 	padding-left: 3.125em;
  }
 }
 
@@ -254,10 +278,9 @@ input[type=text]:focus {
 #Memo{
 	font-family: 'Rozha One', serif;
 	color: #fff;
-    padding-left: 50px;
 	padding-top: 80px;
 	font-size: 50px;
-	width: 50%;
+	padding-left: 50px;
 }
 
 

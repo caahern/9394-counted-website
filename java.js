@@ -124,6 +124,8 @@ $.ajax({
   });
 });
 
+});
+});
 
 // When #ageInput is changed hide the Age div
 $(document).on('change','#ageInput',function(){

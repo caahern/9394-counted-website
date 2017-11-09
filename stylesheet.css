@@ -22,7 +22,6 @@
  }
   #memo{
  	width: 15%;
- 	padding-left: 4em;
  }
   }
 /* smartphones, Android phones, landscape iPhone */
@@ -38,7 +37,6 @@
  }
   #memo{
  	width: 20%;
- 	padding-left: 2em;
  }
   }
 /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
@@ -54,7 +52,6 @@
  }
   #memo{
  	width: 25%;
- 	padding-left: 1.25em;
  }
   }
 /* tablet, landscape iPad, lo-res laptops ands desktops */
@@ -70,7 +67,6 @@
  }
   #memo{
  	width: 30%;
- 	padding-left: 1.875em;
  }
   }
 /* big landscape tablets, laptops, and desktops */
@@ -86,7 +82,6 @@
  }
   #memo{
  	width: 40%;
- 	padding-left: 2.5em;
  }
   }
 /* hi-res laptops and desktops */
@@ -103,7 +98,6 @@
  }
  #memo{
  	width: 50%;
- 	padding-left: 3.125em;
  }
 }
 
@@ -278,9 +272,9 @@ input[type=text]:focus {
 #Memo{
 	font-family: 'Rozha One', serif;
 	color: #fff;
-	padding-top: 80px;
-	font-size: 50px;
-	padding-left: 50px;
+	padding-top: 100px;
+	padding-left: 40px;
+    font-size: 50px;
 }
 
 

@@ -23,6 +23,9 @@
   #memo{
  	width: 15%;
  }
+ #info{
+	width: 15%;
+ }
   }
 /* smartphones, Android phones, landscape iPhone */
 @media (min-width:480px)  {
@@ -37,6 +40,9 @@
  }
   #memo{
  	width: 20%;
+ }
+ #info{
+	width: 20%;
  }
   }
 /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
@@ -53,6 +59,9 @@
   #memo{
  	width: 25%;
  }
+ #info{
+	width: 40%;
+ }
   }
 /* tablet, landscape iPad, lo-res laptops ands desktops */
 @media (min-width:801px)  {
@@ -67,6 +76,9 @@
  }
   #memo{
  	width: 30%;
+ }
+ #info{
+	width: 60%;
  }
   }
 /* big landscape tablets, laptops, and desktops */
@@ -83,6 +95,9 @@
   #memo{
  	width: 40%;
  }
+ #info{
+	width: 80%;
+ }
   }
 /* hi-res laptops and desktops */
 @media (min-width:1281px) {
@@ -98,6 +113,9 @@
  }
  #memo{
  	width: 50%;
+ }
+ #info{
+	width: 100%;
  }
 }
 
@@ -291,9 +309,8 @@ input[type=text]:focus {
     font-family: 'Rozha One', serif;
     font-size: 40px;
 	color: #fff;
-	padding-left: 50px;
+	padding-left: 40px;
 	padding-top: 80px;
-	text-align: center;
 }
 
 #map { 

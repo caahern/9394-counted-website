@@ -16,6 +16,10 @@
  #Specific input{
  	width: 50%;
  }
+
+#submit-btn {
+  width: 30%;
+ }
   }
 /* smartphones, Android phones, landscape iPhone */
 @media (min-width:480px)  {
@@ -24,6 +28,9 @@
    }
    #Specific input{
  	width: 40%;
+ }
+ #submit-btn{
+  width: 25%;
  }
   }
 /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
@@ -34,6 +41,9 @@
      #Specific input{
  	width: 35%;
  }
+ #submit-btn{
+  width: 20%;
+ }
   }
 /* tablet, landscape iPad, lo-res laptops ands desktops */
 @media (min-width:801px)  {
@@ -42,6 +52,9 @@
    }
     #Specific input{
  	width: 30%;
+ }
+ #submit-btn {
+  width: 15%;
  }
   }
 /* big landscape tablets, laptops, and desktops */
@@ -52,6 +65,9 @@
    #Specific input{
  	width: 25%;
  }
+ #submit-btn {
+  width: 10%;
+ }
   }
 /* hi-res laptops and desktops */
 @media (min-width:1281px) {
@@ -61,6 +77,9 @@
   }
   #Specific input{
  	width: 20%;
+ }
+ #submit-btn{
+  width: 10%;
  }
 }
 
@@ -81,7 +100,7 @@ button {
     font-family: 'Rozha One', serif; /* Green */
     border: none;
     color: #D46524;
-    width: 10%;
+    width: 100%; /* 10, 5 */
     height: 5%;
     text-align: center;
     text-decoration: none;
@@ -292,9 +311,7 @@ input[type=text]:focus {
 	background-color: #fff;
 	width: 12%;
 	height: 40px;
-	position: absolute;
 	padding-top: 5px;
-	left: 1050px;
 }
 
 

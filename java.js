@@ -45,8 +45,18 @@ $.ajax({
   // Declare the people variable as data
   var people = data;
 
+  // If statment to change the appended memo if the data.length = 1
+  if (data.length == 1) {
+    $("#Memo").append(data.length + " " + "person just like you was killed by law enforcement in the U.S.A between 2015 - 2016");
+}
+ // Else statment 
+  else { 
+    $("#Memo").append(data.length + " " + "people just like you were killed by law enforcement in the U.S.A between 2015 - 2016");
+  
+}
+
   // Print the amount of people killed based on the user input and append to #memo
-  $("#Memo").append(data.length + " " + "people just like you were killed by law enforcement in the U.S.A between 2015 - 2016");
+  //$("#Memo").append(data.length + " " + "people just like you were killed by law enforcement in the U.S.A between 2015 - 2016");
   
   // Print the data input of the user to #userint
   $("#userint").append("<p>You said" + " " + opinion + " " + "people was an appropriate number.</p>");

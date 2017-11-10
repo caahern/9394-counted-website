@@ -5,101 +5,82 @@
 // When submit button clicked - run #submit-btn function
 $(document).on('click','#submit-btn',function(){
 
-// Hide submit div 
+// Hide specific div 
 $("#Specific").fadeOut(500);
-// Fade in results page 
+
+// Fade in End results page 
 $("#End").fadeIn(2000);
 
+// Fade in the Footer
 $("footer").fadeIn();
 
+//Fade in Info Bar
 $("#infobar").fadeIn();
 
 // Declare the gender variable as user genderInput
 gender = document.getElementById("genderInput").value;
+
 //Declare age variable as age Input
 age = document.getElementById("ageInput").value;
+
 // Declare the race variable as ethnicInput 
 race = document.getElementById("ethnicInput").value;
-//
+
+// Declare the opinion of the user based on question asked as opinion
 opinion = document.getElementById("specificInput").value;
 
 
-// Call counted Api
+// Call counted Api Data
 $.ajax({
-	// url for counted api
+	// url for counted api with gender, race and age variables
        url: "https://thecountedapi.com/api/counted/?sex=" + gender + "&race=" + race + "&age=" + age,
     // Get request
        type: "GET",
-    // function data
+    // When finished run the function data
   }).done(function(data) {
   
-  // for test alert how many data entries are presented
-  //alert("Retrieved " + data.length + " records from the dataset!");
-
-  //console.log the data 
-  console.log(data);
+    //console.log the data for debugging
+      console.log(data);
 	
-//need to put the data into an array so you can loop through it
+  // Declare the people variable as data
   var people = data;
 
-  // Final print - amount killed based on user information
-
-
+  // Print the amount of people killed based on the user input and append to #memo
   $("#Memo").append(data.length + " " + "people just like you were killed by law enforcement in the U.S.A between 2015 - 2016");
   
-
- 
+  // Print the data input of the user to #userint
   $("#userint").append("<p>You said" + " " + opinion + " " + "people was an appropriate number.</p>");
+  
+
+
   //google maps ----------------------------------------------------------- 
 
-  // Declare the address variable as data.map of the data array
-  
-  //var address = data.map(a => a.address);
-  
-  // For each address data print to console for debug
+  // For every person run function
   people.forEach(function(person){
-
+  // console.log the data for each person
     console.log(person);
+  // Declare the address variable
 	  var address = person.address;
+  // Declare the city variable 
 	  var city = person.city;
-	  var state = person.state;
-
-
-  // Declare the city variable
-  //var city = data.map(a => a.city);
-
-  // For each address data print to console for debug
-  //city.forEach(function(city){
-
-    //console.log(city);
-	
- // });
-
-
-
-
   // Declare the state variable 
-  //var state = data.map(a => a.state);
-
-  // For each address data print to console for debug
-  //state.forEach(function(state){
-  //  console.log(state);
-  //);
+	  var state = person.state;
 
 
   // Google maps key 
   key = "AIzaSyDxPgT42cAX7G1N6ygCcZRpvaJI6VdDm5s";
+
   // Google maps geolocation api url
   url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "," + city + "," + state + "&key=" + key; 
-  // Get request for google maps api
 
-    // USA variable for map centre 
+  // USA variable for map centre 
   USA = {lat: 37.0902, lng: -95.7129};
 
   // Set the map variable as the map div
   map = new google.maps.Map(document.getElementById('map'), {zoom: 4,center: USA });
 
- 
+  
+  // Get request for google maps API Geocode
   $.ajax({
   // url 
   url,
@@ -107,31 +88,30 @@ $.ajax({
   type: "GET"
   // run function after get request
   }).done(function(geocodedData){
-	  
+
+	// console.log the geocode results for debug
     console.log(geocodedData.results[0].geometry.location.lat);
 
+  // Declare the latitude variable
     var lat = geocodedData.results[0].geometry.location.lat;
 
+  // console.log the geocode results for debug
     console.log(geocodedData.results[0].geometry.location.lng);
 
+ // Declare the longtitude variable
     var lng = geocodedData.results[0].geometry.location.lng;
 
+ // Declare the Lat lng variable 
     var myLatLng = {lat: lat, lng: lng};
 
+ // Console.log the lat lng for debug
     console.log(myLatLng);
+
 	  //set a timer which only runs after 2 seconds - need to wait for the data to be returned from the server
 	  setTimeout(function (){
-    
-		  // Log the data from request for debug
 
-  
-		//need to get the right info from the api, then set the newmarker to that
-		//this doesn't work for some reason - might need to troubleshoot the api results
-			 
-		//var newMarker = geocodedData.results.geometry.location;
-
-  // Set a test marker on the USA 
-  marker = new google.maps.Marker({position: myLatLng,map: map});
+    // Set a maker for each myLatLng
+    marker = new google.maps.Marker({position: myLatLng,map: map});
 
     }, 3000);
   });

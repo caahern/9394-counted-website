@@ -359,8 +359,8 @@ input[type=text]:focus {
 }
 
 #social { 
-  height: 4480px;
   width: 100%;
+  padding-bottom: 0;
 }
 
 #your {

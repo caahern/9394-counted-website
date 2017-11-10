@@ -1,5 +1,7 @@
 // JavaScript Document
 
+// Will and Caitlin Counted Api call and google maps
+
 //Counted API - Dynamic Data Project
 
 // When submit button clicked - run #submit-btn function
